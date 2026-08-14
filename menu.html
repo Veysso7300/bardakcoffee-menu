@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
   :root{
     --green-950:#0c1f17; --green-800:#123023; --green-700:#1c4632; --green-600:#2f6b52;
@@ -300,6 +301,18 @@
   elOnlyActive.addEventListener("change", apply);
 
   load();
+
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      const hash = window.location.hash || "";
+      if (hash.includes("invite_token") || hash.includes("recovery_token") || hash.includes("confirmation_token")) {
+        window.netlifyIdentity.open();
+      }
+    });
+    window.netlifyIdentity.on("login", () => {
+      window.location.href = "/admin/";
+    });
+  }
 </script>
 </body>
 </html>
