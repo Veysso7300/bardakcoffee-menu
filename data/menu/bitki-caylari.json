@@ -1,23 +1,137 @@
 {
   "items": [
-    { "active": true, "title": "Rooibos", "price": 120, "image": "", "desc": "Portakal Kabuğu & Vanilya" },
-    { "active": true, "title": "Oolong", "price": 120, "image": "", "desc": "Şeftali & Portakal Çiçeği" },
-    { "active": true, "title": "Kış Çayı", "price": 120, "image": "", "desc": "Kuşburnu, Tarçın, Portakal & Greyfurt & Mandalina Kabuğu, Hibiscus, Zencefil, Yaban Mersini, Elma Kurusu, Papatya, Karanfil" },
-    { "active": true, "title": "Mavi Çiçekli Earl Grey", "price": 120, "image": "", "desc": "Seylan Çayı, Ebegümeci Çiçeği, Greyfurt Kabuğu, Bergamot" },
-    { "active": true, "title": "Yeşil Çay", "price": 120, "image": "", "desc": "" },
-    { "active": true, "title": "Elma-Tarçın Çayı", "price": 120, "image": "", "desc": "Elma Kurusu, Afrika Bamya Çiçeği, Kuşburnu, Tarçın, Portakal" },
-    { "active": true, "title": "Limonlu Mate Çayı", "price": 120, "image": "", "desc": "" },
-    { "active": true, "title": "Ihlamur Çayı", "price": 120, "image": "", "desc": "" },
-    { "active": true, "title": "Melisa Çayı", "price": 120, "image": "", "desc": "Melisa Yaprağı, Limon Otu, Oğul Otu" },
-    { "active": true, "title": "Papatya Çayı", "price": 120, "image": "", "desc": "" },
-    { "active": true, "title": "Kuşburnu", "price": 120, "image": "", "desc": "" },
-    { "active": true, "title": "Adaçayı", "price": 120, "image": "", "desc": "" },
-    { "active": true, "title": "Guarena", "price": 120, "image": "", "desc": "Yeşil Rooibos, Ginseng, Guarana, Yeşil Mate Yaprakları, Kuşburnu, Karahindiba, Hurma, Doğal Turunç ve Bergamot Aroması" },
-    { "active": true, "title": "Beyaz Çay Kakao & Çikolata", "price": 120, "image": "", "desc": "Beyaz Çay, Kakao Kabukları, Beyaz Çikolata Parçaları" },
-    { "active": true, "title": "Beyaz Çay Klasik", "price": 120, "image": "", "desc": "%100 Beyaz Çay Yaprakları" },
-    { "active": true, "title": "Beyaz Çay Meyveli", "price": 120, "image": "", "desc": "Beyaz Çay, Kızılcık Meyvesi, Nar Meyvesi, Böğürtlen, Yaban Mersini, Gül" },
-    { "active": true, "title": "Tropikal Çay", "price": 120, "image": "", "desc": "Kırmızı & Yeşil Elma, Yaban Mersini, Zeroşk, Portakal & Limon" },
-    { "active": true, "title": "Lord Grey", "price": 120, "image": "", "desc": "Siyah Çay, Portakal, Bergamot, Nergis Çiçekleri" },
-    { "active": true, "title": "Lady Grey", "price": 120, "image": "", "desc": "Siyah Çay, Bergamot, Limon, Kırmızı Aspir Çiçekleri" }
+    {
+      "active": true,
+      "title": "Rooibos",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Portakal Kabuğu & Vanilya"
+    },
+    {
+      "active": true,
+      "title": "Oolong",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Şeftali & Portakal Çiçeği"
+    },
+    {
+      "active": true,
+      "title": "Kış Çayı",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Kuşburnu, Tarçın, Portakal & Greyfurt & Mandalina Kabuğu, Hibiscus, Zencefil, Yaban Mersini, Elma Kurusu, Papatya, Karanfil"
+    },
+    {
+      "active": true,
+      "title": "Mavi Çiçekli Earl Grey",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Seylan Çayı, Ebegümeci Çiçeği, Greyfurt Kabuğu, Bergamot"
+    },
+    {
+      "active": true,
+      "title": "Yeşil Çay",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": ""
+    },
+    {
+      "active": true,
+      "title": "Elma-Tarçın Çayı",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Elma Kurusu, Afrika Bamya Çiçeği, Kuşburnu, Tarçın, Portakal"
+    },
+    {
+      "active": true,
+      "title": "Limonlu Mate Çayı",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": ""
+    },
+    {
+      "active": true,
+      "title": "Ihlamur Çayı",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": ""
+    },
+    {
+      "active": true,
+      "title": "Melisa Çayı",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Melisa Yaprağı, Limon Otu, Oğul Otu"
+    },
+    {
+      "active": true,
+      "title": "Papatya Çayı",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": ""
+    },
+    {
+      "active": true,
+      "title": "Kuşburnu",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": ""
+    },
+    {
+      "active": true,
+      "title": "Adaçayı",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": ""
+    },
+    {
+      "active": true,
+      "title": "Guarena",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Yeşil Rooibos, Ginseng, Guarana, Yeşil Mate Yaprakları, Kuşburnu, Karahindiba, Hurma, Doğal Turunç ve Bergamot Aroması"
+    },
+    {
+      "active": true,
+      "title": "Beyaz Çay Kakao & Çikolata",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Beyaz Çay, Kakao Kabukları, Beyaz Çikolata Parçaları"
+    },
+    {
+      "active": true,
+      "title": "Beyaz Çay Klasik",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "%100 Beyaz Çay Yaprakları"
+    },
+    {
+      "active": true,
+      "title": "Beyaz Çay Meyveli",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Beyaz Çay, Kızılcık Meyvesi, Nar Meyvesi, Böğürtlen, Yaban Mersini, Gül"
+    },
+    {
+      "active": true,
+      "title": "Tropikal Çay",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Kırmızı & Yeşil Elma, Yaban Mersini, Zeroşk, Portakal & Limon"
+    },
+    {
+      "active": true,
+      "title": "Lord Grey",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Siyah Çay, Portakal, Bergamot, Nergis Çiçekleri"
+    },
+    {
+      "active": true,
+      "title": "Lady Grey",
+      "price": 120,
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Siyah Çay, Bergamot, Limon, Kırmızı Aspir Çiçekleri"
+    }
   ]
 }
