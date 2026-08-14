@@ -9,6 +9,10 @@ Bardak Coffee için mobil uyumlu QR menü sitesi. İçerik Decap CMS admin panel
 - `data/menu/*.json` — Her kategori için ürün verisi
 - `uploads/` — Ürün fotoğrafları (admin panelinden yüklenir)
 
+## Menü Yönetimi
+- **/panel/** — Ana kullanım: özel, marka diline uygun interaktif panel (kategori sekmeleri, anlık düzenleme, sıralama, görsel yükleme, tek tık kaydetme). Netlify Identity ile giriş yapılır, Git Gateway üzerinden doğrudan GitHub'a yazar.
+- **/admin/** — Yedek: Decap CMS tabanlı klasik panel, aynı verileri düzenler, panel çalışmazsa buradan devam edilebilir.
+
 ## Netlify kurulumu
 1. Bu repoyu Netlify'a bağlayın (Build command boş, Publish directory: `.`)
 2. Site Settings → Identity → Enable Identity

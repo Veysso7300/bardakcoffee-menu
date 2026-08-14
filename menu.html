@@ -123,7 +123,7 @@
       </div>
       <div class="navbtns">
         <a class="btn" href="/">🏠 Ana Sayfa</a>
-        <a class="btn" href="/admin/">✏️ Admin</a>
+        <a class="btn" href="/panel/">✏️ Panel</a>
       </div>
     </header>
 
@@ -265,8 +265,7 @@
       const catOrder = SOURCES.map(s => s.cat);
       const catA = catOrder.indexOf(a.category);
       const catB = catOrder.indexOf(b.category);
-      if (catA !== catB) return catA - catB;
-      return (a.title || "").localeCompare(b.title || "", "tr");
+      return catA - catB;
     });
 
     render(items);

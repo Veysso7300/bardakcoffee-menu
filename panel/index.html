@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#123023" />
+<title>Bardak Coffee — Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+  :root{
+    --green-950:#0c1f17; --green-800:#123023; --green-700:#1c4632; --green-600:#2f6b52;
+    --cream:#f6f1e3; --paper:#efe7d1; --ink:#18140f; --muted:#6b6252;
+    --gold:#b98a2f; --rule:rgba(24,20,15,.14); --danger:#a5372c; --danger-bg:#fbe9e6;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:'Work Sans',system-ui,sans-serif; color:var(--ink);
+    background:
+      repeating-linear-gradient(180deg, rgba(24,20,15,.025) 0px, rgba(24,20,15,.025) 1px, transparent 1px, transparent 34px),
+      var(--cream);
+    padding-bottom:90px;
+  }
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+  .serif{font-family:'Fraunces',serif}
+  .wrap{max-width:920px;margin:0 auto;padding:16px 14px 40px}
+
+  /* ---- gate ---- */
+  .gate{
+    min-height:80dvh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:16px; text-align:center; padding:24px;
+  }
+  .gate .badge{
+    width:88px;height:88px;border-radius:50%;background:var(--green-800);color:#fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .gate .badge .l1,.gate .badge .l2{font-family:'Fraunces',serif;font-weight:700;font-size:18px;letter-spacing:2px;line-height:1.1}
+  .gate h1{font-family:'Fraunces',serif;margin:4px 0 0;font-size:24px}
+  .gate p{color:var(--muted);margin:0;max-width:340px}
+  .btn-primary{
+    padding:13px 22px;border-radius:12px;border:none;background:var(--green-700);color:#fff;
+    font-weight:700;font-size:15px;cursor:pointer;
+  }
+  .btn-ghost{
+    padding:10px 16px;border-radius:10px;border:1px solid var(--rule);background:#fff;color:var(--ink);
+    font-size:13px;cursor:pointer;
+  }
+
+  /* ---- header ---- */
+  header{
+    background:var(--green-800); color:#fff; border-radius:18px;
+    padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px;
+    box-shadow:0 16px 34px rgba(18,48,35,.28); flex-wrap:wrap;
+  }
+  header .htitle{ font-family:'Fraunces',serif; font-weight:700; font-size:22px }
+  header .hsub{ font-size:12px; color:rgba(255,255,255,.65); margin-top:2px }
+  header .hactions{ display:flex; gap:8px; align-items:center }
+  header .hactions a, header .hactions button{
+    font-size:12px; color:#fff; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2);
+    padding:8px 12px; border-radius:9px; text-decoration:none; cursor:pointer;
+  }
+
+  /* ---- tabs ---- */
+  .tabs{ display:flex; gap:6px; overflow:auto; margin-top:16px; padding:2px 0; -webkit-overflow-scrolling:touch; scrollbar-width:none }
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{
+    flex:0 0 auto; padding:9px 14px; border-radius:9px; border:1px dashed var(--rule);
+    background:#fff; font-size:12.5px; cursor:pointer; color:var(--ink); white-space:nowrap;
+  }
+  .tab.active{ background:var(--green-700); border-color:var(--green-700); color:#fff; }
+
+  /* ---- toolbar ---- */
+  .toolbar{
+    display:flex; gap:8px; margin-top:14px; align-items:center; flex-wrap:wrap;
+  }
+  .toolbar input[type=text]{
+    flex:1; min-width:160px; padding:10px 12px; border-radius:10px; border:1px solid var(--rule);
+    background:#fff; font-size:14px; font-family:inherit;
+  }
+  .status{ font-size:12px; color:var(--muted) }
+  .status.ok{ color:var(--green-700) }
+  .status.err{ color:var(--danger) }
+
+  /* ---- item card ---- */
+  .items{ display:flex; flex-direction:column; gap:10px; margin-top:14px }
+  .item{
+    background:#fff; border:1px solid var(--rule); border-radius:14px; padding:12px;
+    box-shadow:0 3px 10px rgba(24,20,15,.04);
+  }
+  .item.inactive{ opacity:.55 }
+  .item-top{ display:flex; gap:10px; align-items:flex-start }
+  .thumb-wrap{ position:relative; flex-shrink:0 }
+  .thumb{
+    width:64px;height:64px;border-radius:10px; overflow:hidden; border:1px solid var(--rule);
+    background:var(--paper); display:flex;align-items:center;justify-content:center; font-size:20px; cursor:pointer;
+  }
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .thumb input[type=file]{ display:none }
+  .fields{ flex:1; display:flex; flex-direction:column; gap:6px; min-width:0 }
+  .fields input[type=text], .fields textarea{
+    width:100%; padding:8px 10px; border-radius:8px; border:1px solid var(--rule);
+    font-size:14px; font-family:inherit; background:var(--paper);
+  }
+  .fields textarea{ resize:vertical; min-height:36px; font-style:italic; font-size:12.5px }
+  .title-row{ display:flex; gap:8px; align-items:center }
+  .title-row input[type=text]{ font-weight:700; font-family:'Fraunces',serif; font-size:15px; background:#fff }
+  .price-row{ display:flex; gap:8px; flex-wrap:wrap }
+  .price-field{ display:flex; align-items:center; gap:5px; }
+  .price-field label{ font-size:10.5px; color:var(--muted); white-space:nowrap }
+  .price-field input{
+    width:78px; padding:7px 8px; border-radius:8px; border:1px solid var(--rule);
+    font-family:'JetBrains Mono',monospace; font-size:13px; background:#fff;
+  }
+  .size-toggle{ font-size:10.5px; color:var(--green-700); cursor:pointer; text-decoration:underline; white-space:nowrap }
+
+  .item-actions{ display:flex; flex-direction:column; gap:6px; align-items:center; flex-shrink:0 }
+  .iact{
+    width:30px;height:30px;border-radius:8px;border:1px solid var(--rule);background:var(--paper);
+    display:flex;align-items:center;justify-content:center; cursor:pointer; font-size:13px;
+  }
+  .iact.danger{ background:var(--danger-bg); border-color:var(--danger); color:var(--danger) }
+  .switch{
+    position:relative; width:38px; height:22px; flex-shrink:0; margin-top:2px;
+  }
+  .switch input{ opacity:0; width:0; height:0 }
+  .slider{
+    position:absolute; inset:0; background:#d8d0bd; border-radius:999px; cursor:pointer; transition:.15s;
+  }
+  .slider::before{
+    content:""; position:absolute; width:16px;height:16px; left:3px; top:3px; background:#fff; border-radius:50%; transition:.15s;
+  }
+  .switch input:checked + .slider{ background:var(--green-700) }
+  .switch input:checked + .slider::before{ transform:translateX(16px) }
+
+  .add-btn{
+    margin-top:14px; width:100%; padding:14px; border-radius:12px; border:1px dashed var(--green-700);
+    background:rgba(28,63,48,.06); color:var(--green-800); font-weight:700; font-size:14px; cursor:pointer;
+  }
+
+  /* ---- save bar ---- */
+  .savebar{
+    position:fixed; left:0; right:0; bottom:0; z-index:20;
+    background:var(--green-950); color:#fff; padding:12px 16px;
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    box-shadow:0 -10px 30px rgba(0,0,0,.25);
+  }
+  .savebar .info{ font-size:12px; color:rgba(255,255,255,.7) }
+  .savebar button{
+    padding:11px 20px; border-radius:10px; border:none; background:var(--gold); color:#1c1204;
+    font-weight:700; font-size:14px; cursor:pointer;
+  }
+  .savebar button:disabled{ opacity:.5; cursor:default }
+
+  .empty{ text-align:center; padding:30px; color:var(--muted); font-style:italic; font-family:'Fraunces',serif }
+  .spin{ display:inline-block; width:14px;height:14px;border:2px solid rgba(255,255,255,.3); border-top-color:#fff; border-radius:50%; animation:sp .7s linear infinite; vertical-align:-2px }
+  @keyframes sp{ to{ transform:rotate(360deg) } }
+</style>
+</head>
+<body>
+
+  <div id="gate" class="gate">
+    <div class="badge"><div class="l1">BR</div><div class="l2">DK</div></div>
+    <h1>Bardak Coffee Panel</h1>
+    <p>Menüyü düzenlemek için giriş yapman gerekiyor.</p>
+    <button class="btn-primary" id="loginBtn">Giriş Yap</button>
+  </div>
+
+  <div id="app" class="wrap" style="display:none">
+    <header>
+      <div>
+        <div class="htitle">Menü Paneli</div>
+        <div class="hsub" id="whoami">—</div>
+      </div>
+      <div class="hactions">
+        <a href="/menu.html" target="_blank">👁 Menüyü Gör</a>
+        <button id="logoutBtn">Çıkış</button>
+      </div>
+    </header>
+
+    <div class="tabs" id="tabs"></div>
+
+    <div class="toolbar">
+      <input type="text" id="filterInput" placeholder="Bu kategoride ara...">
+      <span class="status" id="status">—</span>
+    </div>
+
+    <div class="items" id="items"></div>
+    <button class="add-btn" id="addBtn">＋ Yeni Ürün Ekle</button>
+  </div>
+
+  <div class="savebar" id="savebar" style="display:none">
+    <div class="info" id="saveinfo">Değişiklik yok</div>
+    <button id="saveBtn" disabled>Kaydet</button>
+  </div>
+
+<script>
+  const CATEGORIES = [
+    { key:"iced",     label:"🧊 Iced Coffees",        file:"data/menu/iced-coffees.json" },
+    { key:"sicak",    label:"🔥 Sıcak Kahveler",       file:"data/menu/sicak-kahveler.json" },
+    { key:"nc",       label:"🥤 Non-Coffee",           file:"data/menu/non-coffee.json" },
+    { key:"kombucha", label:"🫙 Kombucha",             file:"data/menu/kombucha.json" },
+    { key:"bitki",    label:"🌿 Bitki Çayları",        file:"data/menu/bitki-caylari.json" },
+    { key:"pasta",    label:"🍰 Pastalar / Kekler",    file:"data/menu/pastalar-kekler.json" },
+    { key:"kruvasan", label:"🥐 Kruvasan & Çörekler",  file:"data/menu/kruvasan.json" },
+  ];
+
+  const GG = "/.netlify/git/github/contents/";
+  let activeCat = CATEGORIES[0].key;
+  let cache = {};      // key -> { items, sha }
+  let dirty = {};      // key -> bool
+  let currentUser = null;
+
+  const $ = (sel) => document.querySelector(sel);
+  const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html !== undefined) e.innerHTML = html; return e; };
+
+  function b64EncodeUnicode(str){
+    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (m,p1)=>String.fromCharCode('0x'+p1)));
+  }
+  function b64DecodeUnicode(str){
+    return decodeURIComponent(atob(str.replace(/\n/g,'')).split('').map(c=>'%'+('00'+c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+  }
+
+  async function authHeader(){
+    const jwt = await currentUser.jwt();
+    return { "Authorization": "Bearer " + jwt };
+  }
+
+  async function loadCategory(key){
+    const cat = CATEGORIES.find(c=>c.key===key);
+    setStatus("Yükleniyor…");
+    try{
+      const headers = await authHeader();
+      const res = await fetch(GG + cat.file, { headers });
+      if (!res.ok) throw new Error("Yüklenemedi: " + res.status);
+      const data = await res.json();
+      const parsed = JSON.parse(b64DecodeUnicode(data.content));
+      cache[key] = { items: parsed.items || [], sha: data.sha };
+      dirty[key] = false;
+      setStatus("Hazır ✅", "ok");
+    }catch(e){
+      setStatus("Hata: " + e.message, "err");
+      cache[key] = { items: [], sha: null };
+    }
+    render();
+  }
+
+  function setStatus(msg, cls){
+    const s = $("#status");
+    s.textContent = msg;
+    s.className = "status" + (cls ? " " + cls : "");
+  }
+
+  function makeTabs(){
+    const wrap = $("#tabs");
+    wrap.innerHTML = "";
+    CATEGORIES.forEach(c=>{
+      const b = el("button", "tab" + (c.key===activeCat ? " active":""), c.label + (dirty[c.key] ? " •" : ""));
+      b.onclick = () => { activeCat = c.key; makeTabs(); ensureLoaded(c.key); };
+      wrap.appendChild(b);
+    });
+  }
+
+  async function ensureLoaded(key){
+    if (!cache[key]) await loadCategory(key);
+    else render();
+  }
+
+  function fmtPreview(it){
+    if (it.price_kucuk !== undefined || it.price_orta !== undefined){
+      return `K:${it.price_kucuk ?? "-"}₺ / O:${it.price_orta ?? "-"}₺`;
+    }
+    return `${it.price ?? "-"}₺`;
+  }
+
+  function render(){
+    makeTabs();
+    const data = cache[activeCat];
+    const wrap = $("#items");
+    wrap.innerHTML = "";
+    if (!data){ return; }
+
+    const q = ($("#filterInput").value || "").toLowerCase().trim();
+    data.items.forEach((it, idx) => {
+      if (q && !(it.title||"").toLowerCase().includes(q)) return;
+
+      const card = el("div", "item" + (it.active===false ? " inactive" : ""));
+      const top = el("div", "item-top");
+
+      // thumb
+      const thumbWrap = el("div", "thumb-wrap");
+      const thumb = el("div", "thumb", it.image ? `<img src="${it.image}" alt="">` : "☕");
+      const fileInput = el("input"); fileInput.type = "file"; fileInput.accept = "image/*";
+      fileInput.onchange = (e) => uploadImage(e, idx);
+      thumb.onclick = () => fileInput.click();
+      thumbWrap.append(thumb, fileInput);
+
+      // fields
+      const fields = el("div", "fields");
+
+      const titleRow = el("div", "title-row");
+      const switchLbl = el("label", "switch");
+      const chk = el("input"); chk.type = "checkbox"; chk.checked = it.active !== false;
+      chk.onchange = () => { it.active = chk.checked; card.classList.toggle("inactive", !chk.checked); markDirty(); };
+      const slider = el("span", "slider");
+      switchLbl.append(chk, slider);
+
+      const titleInput = el("input"); titleInput.type = "text"; titleInput.value = it.title || ""; titleInput.placeholder = "Ürün adı";
+      titleInput.oninput = () => { it.title = titleInput.value; markDirty(); };
+
+      titleRow.append(switchLbl, titleInput);
+
+      const priceRow = el("div", "price-row");
+      const sized = it.price_kucuk !== undefined || it.price_orta !== undefined;
+
+      function buildSinglePrice(){
+        priceRow.innerHTML = "";
+        const pf = el("div", "price-field");
+        pf.innerHTML = `<label>₺</label>`;
+        const inp = el("input"); inp.type = "number"; inp.value = it.price ?? "";
+        inp.oninput = () => { it.price = inp.value === "" ? undefined : parseFloat(inp.value); markDirty(); };
+        pf.appendChild(inp);
+        priceRow.appendChild(pf);
+        const toSize = el("span", "size-toggle", "Boy ekle");
+        toSize.onclick = () => { delete it.price; it.price_kucuk = it.price_kucuk ?? 0; it.price_orta = it.price_orta ?? 0; markDirty(); buildSizedPrice(); };
+        priceRow.appendChild(toSize);
+      }
+      function buildSizedPrice(){
+        priceRow.innerHTML = "";
+        const pfK = el("div", "price-field"); pfK.innerHTML = `<label>K</label>`;
+        const inpK = el("input"); inpK.type="number"; inpK.value = it.price_kucuk ?? "";
+        inpK.oninput = () => { it.price_kucuk = inpK.value===""?undefined:parseFloat(inpK.value); markDirty(); };
+        pfK.appendChild(inpK);
+
+        const pfO = el("div", "price-field"); pfO.innerHTML = `<label>O</label>`;
+        const inpO = el("input"); inpO.type="number"; inpO.value = it.price_orta ?? "";
+        inpO.oninput = () => { it.price_orta = inpO.value===""?undefined:parseFloat(inpO.value); markDirty(); };
+        pfO.appendChild(inpO);
+
+        priceRow.append(pfK, pfO);
+        const toSingle = el("span", "size-toggle", "Tek fiyata çevir");
+        toSingle.onclick = () => { delete it.price_kucuk; delete it.price_orta; it.price = it.price ?? 0; markDirty(); buildSinglePrice(); };
+        priceRow.appendChild(toSingle);
+      }
+      sized ? buildSizedPrice() : buildSinglePrice();
+
+      const descInput = el("textarea"); descInput.placeholder = "Açıklama / tatma notu (opsiyonel)"; descInput.value = it.desc || "";
+      descInput.oninput = () => { it.desc = descInput.value; markDirty(); };
+
+      fields.append(titleRow, priceRow, descInput);
+      top.append(thumbWrap, fields);
+
+      // actions
+      const acts = el("div", "item-actions");
+      const up = el("button", "iact", "↑"); up.title="Yukarı taşı";
+      up.onclick = () => { if (idx>0){ [data.items[idx-1], data.items[idx]] = [data.items[idx], data.items[idx-1]]; markDirty(); render(); } };
+      const down = el("button", "iact", "↓"); down.title="Aşağı taşı";
+      down.onclick = () => { if (idx<data.items.length-1){ [data.items[idx+1], data.items[idx]] = [data.items[idx], data.items[idx+1]]; markDirty(); render(); } };
+      const del = el("button", "iact danger", "✕"); del.title="Sil";
+      del.onclick = () => { if (confirm(`"${it.title || 'Bu ürün'}" silinsin mi?`)){ data.items.splice(idx,1); markDirty(); render(); } };
+      acts.append(up, down, del);
+
+      card.append(top, acts);
+      wrap.appendChild(card);
+    });
+
+    if (!data.items.length){
+      wrap.innerHTML = `<div class="empty">Bu kategoride ürün yok. Aşağıdan yeni ürün ekleyebilirsin.</div>`;
+    }
+
+    updateSaveBar();
+  }
+
+  function markDirty(){
+    dirty[activeCat] = true;
+    makeTabs();
+    updateSaveBar();
+  }
+
+  function updateSaveBar(){
+    const bar = $("#savebar");
+    const btn = $("#saveBtn");
+    const info = $("#saveinfo");
+    bar.style.display = "flex";
+    if (dirty[activeCat]){
+      btn.disabled = false;
+      info.textContent = "Kaydedilmemiş değişiklikler var";
+    } else {
+      btn.disabled = true;
+      info.textContent = "Değişiklik yok";
+    }
+  }
+
+  async function saveCategory(){
+    const key = activeCat;
+    const cat = CATEGORIES.find(c=>c.key===key);
+    const data = cache[key];
+    const btn = $("#saveBtn");
+    btn.disabled = true;
+    btn.innerHTML = `<span class="spin"></span> Kaydediliyor…`;
+    try{
+      const headers = await authHeader();
+      const body = JSON.stringify({ items: data.items }, null, 2) + "\n";
+      const res = await fetch(GG + cat.file, {
+        method: "PUT",
+        headers: { ...headers, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: `Menü güncellendi: ${cat.label} (panel)`,
+          content: b64EncodeUnicode(body),
+          sha: data.sha,
+        })
+      });
+      if (!res.ok){
+        const t = await res.text();
+        throw new Error(res.status + " " + t.slice(0,200));
+      }
+      const result = await res.json();
+      data.sha = result.content.sha;
+      dirty[key] = false;
+      setStatus("Kaydedildi ✅ (siteye yansıması 1-2 dk sürebilir)", "ok");
+    }catch(e){
+      setStatus("Kaydetme hatası: " + e.message, "err");
+      alert("Kaydedilemedi: " + e.message);
+    }
+    btn.innerHTML = "Kaydet";
+    makeTabs();
+    updateSaveBar();
+  }
+
+  async function uploadImage(e, idx){
+    const file = e.target.files[0];
+    if (!file) return;
+    setStatus("Görsel yükleniyor…");
+    try{
+      const reader = new FileReader();
+      const base64 = await new Promise((res, rej) => {
+        reader.onload = () => res(reader.result.split(",")[1]);
+        reader.onerror = rej;
+        reader.readAsDataURL(file);
+      });
+      const safeName = file.name.replace(/[^a-zA-Z0-9.\-_]/g, "_");
+      const path = `uploads/${Date.now()}-${safeName}`;
+      const headers = await authHeader();
+      const res = await fetch(GG + path, {
+        method: "PUT",
+        headers: { ...headers, "Content-Type": "application/json" },
+        body: JSON.stringify({ message: `Görsel yüklendi: ${safeName}`, content: base64 })
+      });
+      if (!res.ok){ const t = await res.text(); throw new Error(res.status + " " + t.slice(0,200)); }
+      cache[activeCat].items[idx].image = "/" + path;
+      markDirty();
+      render();
+      setStatus("Görsel yüklendi ✅", "ok");
+    }catch(err){
+      setStatus("Görsel yükleme hatası: " + err.message, "err");
+      alert("Görsel yüklenemedi: " + err.message);
+    }
+  }
+
+  $("#addBtn").addEventListener("click", () => {
+    const data = cache[activeCat];
+    if (!data) return;
+    data.items.push({ active: true, title: "Yeni Ürün", price: 0, image: "", desc: "" });
+    markDirty();
+    render();
+    setTimeout(() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" }), 50);
+  });
+
+  $("#saveBtn").addEventListener("click", saveCategory);
+  $("#filterInput").addEventListener("input", render);
+
+  window.addEventListener("beforeunload", (e) => {
+    if (Object.values(dirty).some(Boolean)){ e.preventDefault(); e.returnValue = ""; }
+  });
+
+  // ---- auth ----
+  function showApp(user){
+    currentUser = user;
+    $("#gate").style.display = "none";
+    $("#app").style.display = "block";
+    $("#whoami").textContent = user.email || "Giriş yapıldı";
+    makeTabs();
+    ensureLoaded(activeCat);
+  }
+  function showGate(){
+    currentUser = null;
+    $("#gate").style.display = "flex";
+    $("#app").style.display = "none";
+    $("#savebar").style.display = "none";
+  }
+
+  window.addEventListener("load", () => {
+    if (!window.netlifyIdentity){
+      document.body.innerHTML = "<div style='padding:24px;font-family:sans-serif'>Netlify Identity yüklenemedi.</div>";
+      return;
+    }
+    netlifyIdentity.on("init", (user) => {
+      const hash = window.location.hash || "";
+      if (hash.includes("invite_token") || hash.includes("recovery_token") || hash.includes("confirmation_token")){
+        netlifyIdentity.open();
+        return;
+      }
+      user ? showApp(user) : showGate();
+    });
+    netlifyIdentity.on("login", (user) => { showApp(user); netlifyIdentity.close(); });
+    netlifyIdentity.on("logout", showGate);
+    netlifyIdentity.init();
+
+    $("#loginBtn").onclick = () => netlifyIdentity.open("login");
+    $("#logoutBtn").onclick = () => {
+      if (Object.values(dirty).some(Boolean) && !confirm("Kaydedilmemiş değişiklikler var. Yine de çıkılsın mı?")) return;
+      netlifyIdentity.logout();
+    };
+  });
+</script>
+</body>
+</html>
