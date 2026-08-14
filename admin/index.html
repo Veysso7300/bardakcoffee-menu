@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bardak Coffee — Admin</title>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- CDN yerine local dosya -->
+    <script defer src="/admin/decap-cms.js"></script>
+  </head>
+  <body>
+    <script>
+      window.addEventListener("load", () => {
+        if (!window.CMS) {
+          document.body.innerHTML =
+            "<div style='font-family:system-ui;padding:18px'>Decap CMS yüklenemedi. /admin/decap-cms.js dosyası yok veya bloklu.</div>";
+          return;
+        }
+      });
+
+      // Netlify Identity giriş yönlendirmesi düzeltmesi
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

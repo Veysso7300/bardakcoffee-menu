@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "active": true, "title": "Cheesecake", "price": 130, "image": "", "desc": "" },
+    { "active": true, "title": "San Sebastian Cheesecake", "price": 140, "image": "", "desc": "" },
+    { "active": true, "title": "Brownie", "price": 110, "image": "", "desc": "" },
+    { "active": true, "title": "Havuçlu Kek", "price": 100, "image": "", "desc": "" },
+    { "active": true, "title": "Çikolatalı Kek", "price": 110, "image": "", "desc": "" },
+    { "active": true, "title": "Limonlu Kek", "price": 100, "image": "", "desc": "" }
+  ]
+}

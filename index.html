@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#1c3f30" />
+  <title>Bardak Coffee</title>
+  <style>
+    :root{
+      --green:#1c3f30; --green-dark:#122a20; --green-light:#2c5a45;
+      --bg:#faf9f6; --text:#111111; --muted:#5a5a55;
+      --border:rgba(17,17,17,.10);
+      --r18:18px; --shadow:0 14px 34px rgba(17,17,17,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      color:var(--text); background:var(--bg);
+    }
+    .wrap{max-width:780px;margin:0 auto;padding:22px 16px 32px;min-height:100dvh;display:flex;flex-direction:column}
+
+    .hero{
+      padding:26px 20px;
+      border-radius:24px;
+      background: linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
+      color:#fff;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+    .badge{
+      width:84px;height:84px;margin:0 auto;
+      border-radius:20px;
+      background:var(--green-dark);
+      border:1px solid rgba(255,255,255,.18);
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      line-height:1;
+    }
+    .badge .l1, .badge .l2{font-weight:900;font-size:19px;letter-spacing:2px}
+    .badge .l3{font-size:6px;letter-spacing:2px;margin-top:5px;color:rgba(255,255,255,.75);text-transform:uppercase}
+    h1{margin:16px 0 4px;font-size:30px;letter-spacing:.3px;font-weight:800}
+    .sub{margin:0;color:rgba(255,255,255,.78);font-size:14px;line-height:1.4}
+
+    .grid{margin-top:16px;display:grid;grid-template-columns:1fr;gap:10px}
+    .card{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:14px 16px;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:#fff;
+      box-shadow:0 8px 22px rgba(17,17,17,.06);
+      text-decoration:none; color:var(--text);
+    }
+    .left{display:flex;gap:12px;align-items:center}
+    .ico{
+      width:42px;height:42px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      background:rgba(28,63,48,.08);
+      font-size:18px;
+    }
+    .t{font-weight:800;font-size:15px}
+    .d{color:var(--muted);font-size:12px;margin-top:2px}
+    .card:active{transform:scale(.99)}
+    .menu{border-color:rgba(28,63,48,.30);background:linear-gradient(180deg,#f3f8f5,#fff)}
+    .arrow{opacity:.55;font-size:18px}
+
+    .hours{
+      margin-top:16px; padding:14px 16px; border-radius:18px;
+      border:1px solid var(--border); background:#fff;
+      font-size:13px; color:var(--muted); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    }
+    .hours b{color:var(--text)}
+
+    .footer{margin-top:auto;padding-top:22px;color:var(--muted);font-size:12px;text-align:center}
+    @media (min-width:720px){ .grid{grid-template-columns:1fr 1fr} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="badge">
+        <div class="l1">BR</div>
+        <div class="l2">DK</div>
+        <div class="l3">coffee co.</div>
+      </div>
+      <h1>Bardak Coffee</h1>
+      <p class="sub">Espresso Bazlı Kahveler • Filtre Kahve • Şırnak</p>
+    </div>
+
+    <div class="grid">
+      <a class="card menu" href="/menu.html">
+        <div class="left">
+          <div class="ico">📖</div>
+          <div>
+            <div class="t">Menü</div>
+            <div class="d">Kategorilerle hızlı gez</div>
+          </div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://www.instagram.com/bardakcoffee">
+        <div class="left">
+          <div class="ico">📸</div>
+          <div>
+            <div class="t">Instagram</div>
+            <div class="d">@bardakcoffee</div>
+          </div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="card" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Kaz%C4%B1m+Karabekir+Mahallesi+1001.+Sokak+%C5%9E%C4%B1rnak+Bardak+Coffee">
+        <div class="left">
+          <div class="ico">📍</div>
+          <div>
+            <div class="t">Konum</div>
+            <div class="d">Kazım Karabekir Mah. 1001. Sokak</div>
+          </div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="card" href="/admin/">
+        <div class="left">
+          <div class="ico">✏️</div>
+          <div>
+            <div class="t">Admin</div>
+            <div class="d">Menüyü düzenle</div>
+          </div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+    </div>
+
+    <div class="hours">
+      <div><b>Hafta içi</b> 05:00 – 21:00</div>
+      <div><b>Hafta sonu</b> 07:00 – 22:00</div>
+    </div>
+
+    <div class="footer">© 2026 Bardak Coffee</div>
+  </div>
+</body>
+</html>

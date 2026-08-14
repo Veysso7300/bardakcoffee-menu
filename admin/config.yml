@@ -1,0 +1,80 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "menu"
+    label: "☕ Menü Yönetimi"
+    files:
+
+      - name: "iced"
+        label: "🧊 Iced Coffees"
+        file: "data/menu/iced-coffees.json"
+        format: "json"
+        editor: { preview: false }
+        fields: &item_fields
+          - label: "Ürünler"
+            name: "items"
+            widget: "list"
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.active}} • {{fields.title}} — {{fields.price}}₺"
+            fields:
+              - { label: "Aktif (menüde görünsün)", name: "active", widget: "boolean", default: true }
+              - { label: "Ürün Adı", name: "title", widget: "string" }
+              - { label: "Fiyat (₺)", name: "price", widget: "number", value_type: "float", min: 0 }
+              - { label: "Fotoğraf", name: "image", widget: "image", required: false }
+              - { label: "Açıklama", name: "desc", widget: "string", required: false }
+
+      - name: "sicak_kahveler"
+        label: "🔥 Sıcak Kahveler (Küçük / Orta)"
+        file: "data/menu/sicak-kahveler.json"
+        format: "json"
+        editor: { preview: false }
+        fields:
+          - label: "Ürünler"
+            name: "items"
+            widget: "list"
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.active}} • {{fields.title}} — K:{{fields.price_kucuk}}₺ / O:{{fields.price_orta}}₺"
+            fields:
+              - { label: "Aktif (menüde görünsün)", name: "active", widget: "boolean", default: true }
+              - { label: "Ürün Adı", name: "title", widget: "string" }
+              - { label: "Fiyat - Küçük Boy (₺)", name: "price_kucuk", widget: "number", value_type: "float", min: 0 }
+              - { label: "Fiyat - Orta Boy (₺)", name: "price_orta", widget: "number", value_type: "float", min: 0 }
+              - { label: "Fotoğraf", name: "image", widget: "image", required: false }
+              - { label: "Açıklama", name: "desc", widget: "string", required: false }
+
+      - name: "non_coffee"
+        label: "🥤 Non-Coffee"
+        file: "data/menu/non-coffee.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "pastalar"
+        label: "🍰 Pastalar / Kekler"
+        file: "data/menu/pastalar-kekler.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "bitki_caylari"
+        label: "🌿 Bitki Çayları"
+        file: "data/menu/bitki-caylari.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields
+
+      - name: "kruvasan"
+        label: "🥐 Kruvasan"
+        file: "data/menu/kruvasan.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields

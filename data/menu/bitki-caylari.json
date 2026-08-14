@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "active": true, "title": "Ihlamur", "price": 70, "image": "", "desc": "" },
+    { "active": true, "title": "Nane Limon", "price": 70, "image": "", "desc": "" },
+    { "active": true, "title": "Yeşil Çay", "price": 65, "image": "", "desc": "" },
+    { "active": true, "title": "Adaçayı", "price": 70, "image": "", "desc": "" },
+    { "active": true, "title": "Karışık Meyve Çayı", "price": 70, "image": "", "desc": "" },
+    { "active": true, "title": "Papatya", "price": 70, "image": "", "desc": "" }
+  ]
+}

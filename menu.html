@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#1c3f30" />
+  <title>Bardak Coffee — Menü</title>
+
+  <style>
+    :root{
+      --green:#1c3f30; --green-dark:#122a20; --green-light:#2c5a45;
+      --bg:#faf9f6; --card:#ffffff;
+      --text:#111111; --muted:#5a5a55;
+      --border:rgba(17,17,17,.10);
+      --r14:14px; --r16:16px; --r18:18px;
+      --shadow: 0 10px 28px rgba(17,17,17,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      color:var(--text); background:var(--bg);
+    }
+    .wrap{max-width:980px;margin:0 auto;padding:14px 14px 92px;}
+
+    header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .left h1{margin:0;font-size:26px;color:var(--green-dark)}
+    .left .sub{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .btn{
+      display:inline-flex;gap:8px;align-items:center;justify-content:center;
+      padding:10px 12px;border-radius:14px;border:1px solid var(--border);
+      background:#fff;color:var(--text);text-decoration:none;
+      box-shadow:0 4px 14px rgba(17,17,17,.06);
+      user-select:none; white-space:nowrap; font-size:13px;
+    }
+    .btn:active{transform:scale(.98)}
+
+    .sticky{
+      position:sticky; top:0; z-index:10;
+      margin-top:12px;
+      padding:10px 0 10px;
+      background: linear-gradient(180deg, rgba(250,249,246,.98), rgba(250,249,246,.75));
+      backdrop-filter: blur(10px);
+    }
+    .panel{
+      border:1px solid var(--border);
+      background:var(--card);
+      border-radius:var(--r18);
+      padding:10px;
+      box-shadow:var(--shadow);
+      display:grid; gap:10px;
+    }
+    .row{display:grid;grid-template-columns:1fr 120px;gap:8px;align-items:center}
+    input,select{
+      width:100%;
+      padding:11px 12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      outline:none;
+      font-size:16px;
+    }
+    input::placeholder{color:rgba(17,17,17,.35)}
+
+    .tabs{
+      display:flex; gap:8px; overflow:auto; padding:2px;
+      -webkit-overflow-scrolling:touch; scrollbar-width:none;
+    }
+    .tabs::-webkit-scrollbar{display:none}
+    .tab{
+      flex:0 0 auto;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:13px;
+      user-select:none;
+      color: var(--text);
+      cursor:pointer;
+    }
+    .tab.active{
+      border-color:var(--green);
+      background: var(--green);
+      color:#fff;
+    }
+    .meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:12px;padding:0 2px}
+
+    .grid{display:grid;gap:10px;margin-top:14px}
+    .item{
+      display:grid;
+      grid-template-columns:72px 1fr auto;
+      gap:12px;
+      padding:12px;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--r16);
+      box-shadow: 0 8px 22px rgba(17,17,17,.06);
+      align-items:center;
+    }
+    .thumb{
+      width:72px;height:72px;border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(28,63,48,.06);
+      overflow:hidden;
+      display:flex;align-items:center;justify-content:center;
+      color:rgba(17,17,17,.35);font-size:20px;
+    }
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{font-weight:800;font-size:15px;line-height:1.2}
+    .desc{margin-top:4px;color:var(--muted);font-size:13px;line-height:1.25}
+    .price{
+      padding:9px 10px;border-radius:999px;
+      border:1px solid var(--green);
+      background:rgba(28,63,48,.08);
+      color:var(--green-dark);
+      font-weight:800;white-space:nowrap;margin-left:6px;font-size:13px;
+      text-align:center;
+    }
+    .price .sizes{display:flex;flex-direction:column;gap:2px;font-size:11px}
+    .empty{color:var(--muted);padding:10px 2px;}
+    @media (min-width:760px){
+      .row{grid-template-columns:1fr 160px}
+      .item{grid-template-columns:84px 1fr auto}
+      .thumb{width:84px;height:84px}
+      .left h1{font-size:32px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="left">
+        <h1>Menü</h1>
+        <div class="sub">Bardak Coffee — Sekmelerle kategori seç</div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
+        <a class="btn" href="/">🏠 Ana Sayfa</a>
+        <a class="btn" href="/admin/">✏️ Admin</a>
+      </div>
+    </header>
+
+    <div class="sticky">
+      <div class="panel">
+        <div class="row">
+          <input id="q" placeholder="Ara: latte, kruvasan, ıhlamur..." autocomplete="off" />
+          <select id="onlyActive">
+            <option value="1">Aktif</option>
+            <option value="0">Tümü</option>
+          </select>
+        </div>
+
+        <div class="tabs" id="tabs"></div>
+
+        <div class="meta">
+          <span id="status">Menü yükleniyor…</span>
+          <span id="meta"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+
+<script>
+  const SOURCES = [
+    { cat: "Iced Coffees",       url: "/data/menu/iced-coffees.json" },
+    { cat: "Sıcak Kahveler",     url: "/data/menu/sicak-kahveler.json" },
+    { cat: "Non-Coffee",         url: "/data/menu/non-coffee.json" },
+    { cat: "Pastalar / Kekler",  url: "/data/menu/pastalar-kekler.json" },
+    { cat: "Bitki Çayları",      url: "/data/menu/bitki-caylari.json" },
+    { cat: "Kruvasan",           url: "/data/menu/kruvasan.json" },
+  ];
+
+  const elGrid = document.getElementById("grid");
+  const elQ = document.getElementById("q");
+  const elOnlyActive = document.getElementById("onlyActive");
+  const elTabs = document.getElementById("tabs");
+  const elStatus = document.getElementById("status");
+  const elMeta = document.getElementById("meta");
+
+  const norm = (s) => (s ?? "").toString().toLowerCase().trim();
+  const fmtTRY = (n) => {
+    const num = typeof n === "number" ? n : parseFloat(n || 0);
+    const v = Number.isFinite(num) ? Math.round(num) : n;
+    return `${v}₺`;
+  };
+
+  let allItems = [];
+  let activeTab = "Tümü";
+
+  function makeTabs(){
+    elTabs.innerHTML = "";
+    const cats = ["Tümü", ...SOURCES.map(s=>s.cat)];
+    for (const c of cats){
+      const b = document.createElement("button");
+      b.className = "tab" + (activeTab === c ? " active" : "");
+      b.textContent = c;
+      b.onclick = () => { activeTab = c; makeTabs(); apply(); };
+      elTabs.appendChild(b);
+    }
+  }
+
+  function priceBlock(it){
+    if (it.price_kucuk !== undefined || it.price_orta !== undefined){
+      return `<div class="price"><div class="sizes">
+        <span>Küçük ${fmtTRY(it.price_kucuk)}</span>
+        <span>Orta ${fmtTRY(it.price_orta)}</span>
+      </div></div>`;
+    }
+    return `<div class="price">${fmtTRY(it.price)}</div>`;
+  }
+
+  function render(items){
+    elGrid.innerHTML = "";
+    if (!items.length){
+      elGrid.innerHTML = `<div class="empty">Sonuç yok. Aramayı/sekme filtresini değiştir.</div>`;
+      return;
+    }
+    for (const it of items){
+      const img = it.image ? String(it.image) : "";
+      const desc = it.desc || "";
+      const card = document.createElement("div");
+      card.className = "item";
+      card.innerHTML = `
+        <div class="thumb">${img ? `<img src="${img}" alt="">` : "☕"}</div>
+        <div>
+          <div class="name">${it.title || "-"}</div>
+          ${desc ? `<div class="desc">${desc}</div>` : ``}
+        </div>
+        ${priceBlock(it)}
+      `;
+      elGrid.appendChild(card);
+    }
+  }
+
+  function apply(){
+    const q = norm(elQ.value);
+    const onlyActive = elOnlyActive.value === "1";
+
+    let items = allItems.slice();
+    if (onlyActive) items = items.filter(x => x.active !== false);
+    if (activeTab !== "Tümü") items = items.filter(x => x.category === activeTab);
+
+    if (q){
+      items = items.filter(x =>
+        norm(x.title).includes(q) || norm(x.desc).includes(q) || norm(x.category).includes(q)
+      );
+    }
+
+    items.sort((a, b) => {
+      const catOrder = SOURCES.map(s => s.cat);
+      const catA = catOrder.indexOf(a.category);
+      const catB = catOrder.indexOf(b.category);
+      if (catA !== catB) return catA - catB;
+      return (a.title || "").localeCompare(b.title || "", "tr");
+    });
+
+    render(items);
+    elMeta.textContent = `Gösterilen: ${items.length} / Toplam: ${allItems.length}`;
+  }
+
+  async function load(){
+    try{
+      elStatus.textContent = "Menü yükleniyor…";
+      makeTabs();
+
+      const results = await Promise.all(
+        SOURCES.map(async (s) => {
+          const res = await fetch(s.url + "?v=" + Date.now(), { cache: "no-store" });
+          if (!res.ok) throw new Error(`${s.url} okunamadı: ${res.status}`);
+          const data = await res.json();
+          const items = Array.isArray(data.items) ? data.items : [];
+          return items.map(it => ({ ...it, category: s.cat }));
+        })
+      );
+
+      allItems = results.flat();
+      elStatus.textContent = "Hazır ✅";
+      apply();
+    }catch(e){
+      elStatus.textContent = "Menü yüklenemedi ❌";
+      elGrid.innerHTML = `<div class="empty" style="color:#b23b3b">Hata: ${String(e.message||e)}</div>`;
+    }
+  }
+
+  elQ.addEventListener("input", apply);
+  elOnlyActive.addEventListener("change", apply);
+
+  load();
+</script>
+</body>
+</html>

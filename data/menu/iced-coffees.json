@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "active": true, "title": "Iced Americano", "price": 90, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Latte", "price": 110, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Mocha", "price": 120, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Caramel Macchiato", "price": 125, "image": "", "desc": "" },
+    { "active": true, "title": "Iced White Mocha", "price": 125, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Filtre Kahve", "price": 100, "image": "", "desc": "" },
+    { "active": true, "title": "Cold Brew", "price": 110, "image": "", "desc": "" },
+    { "active": true, "title": "Frappé", "price": 120, "image": "", "desc": "" }
+  ]
+}

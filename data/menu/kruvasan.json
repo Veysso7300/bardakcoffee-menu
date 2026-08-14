@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "active": true, "title": "Sade Kruvasan", "price": 85, "image": "", "desc": "" },
+    { "active": true, "title": "Çikolatalı Kruvasan", "price": 95, "image": "", "desc": "" },
+    { "active": true, "title": "Badem Kruvasan", "price": 100, "image": "", "desc": "" },
+    { "active": true, "title": "Peynirli Kruvasan", "price": 95, "image": "", "desc": "" }
+  ]
+}
