@@ -56,7 +56,7 @@
     {
       "active": true,
       "title": "Filtre Kahve",
-      "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1583577012061-d69d2dbc900a?fm=jpg&q=60&w=800&auto=format&fit=crop",
       "desc": "Damla demleme yöntemiyle hazırlanır; hafif ve aromatik.",
       "price_kucuk": 130,
       "price_orta": 135
@@ -64,14 +64,14 @@
     {
       "active": true,
       "title": "Türk Kahvesi",
-      "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1583577012061-d69d2dbc900a?fm=jpg&q=60&w=800&auto=format&fit=crop",
       "desc": "Cezvede pişirilen geleneksel kahve; yoğun ve köpüklü.",
       "price": 90
     },
     {
       "active": true,
       "title": "Chemex / V60",
-      "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1583577012061-d69d2dbc900a?fm=jpg&q=60&w=800&auto=format&fit=crop",
       "desc": "Elde demleme yöntemi; kahvenin inceliklerini öne çıkarır.",
       "price": 180
     },
@@ -94,7 +94,7 @@
     {
       "active": true,
       "title": "Caramel Macchiato",
-      "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1756132540577-0a8da3e0f0f6?fm=jpg&q=60&w=800&auto=format&fit=crop",
       "desc": "Vanilyalı süt üstüne espresso ve karamel; katmanlı ve tatlı.",
       "price_kucuk": 145,
       "price_orta": 155
@@ -110,7 +110,7 @@
     {
       "active": true,
       "title": "Caramel Latte",
-      "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1756132540577-0a8da3e0f0f6?fm=jpg&q=60&w=800&auto=format&fit=crop",
       "desc": "Karamel sos, espresso ve süt; tatlı ve yumuşak.",
       "price_kucuk": 145,
       "price_orta": 155
@@ -118,7 +118,7 @@
     {
       "active": true,
       "title": "Salted Caramel Latte",
-      "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1756132540577-0a8da3e0f0f6?fm=jpg&q=60&w=800&auto=format&fit=crop",
       "desc": "Tuzlu karamelle dengelenen tatlı-tuzlu lezzet.",
       "price_kucuk": 145,
       "price_orta": 145
@@ -142,7 +142,7 @@
     {
       "active": true,
       "title": "Lotus",
-      "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1756132540577-0a8da3e0f0f6?fm=jpg&q=60&w=800&auto=format&fit=crop",
       "desc": "Lotus bisküvi sosu ve espresso; karamelimsi, tatlı bir lezzet.",
       "price_kucuk": 145,
       "price_orta": 155
