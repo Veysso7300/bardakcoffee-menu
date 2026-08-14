@@ -5,56 +5,56 @@
       "title": "Limonata",
       "price": 130,
       "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tercihen: Sade / Çilek / Nane"
+      "desc": "Tercihen: Sade / Çilek / Nane — Taze sıkılmış limon; tercihe göre çilek ya da nane ile."
     },
     {
       "active": true,
       "title": "Cool Lime",
       "price": 130,
       "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Misket limonu ve nane; ferahlatıcı bir yaz içeceği."
     },
     {
       "active": true,
       "title": "Lemon Hibiscus",
       "price": 155,
       "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Hibiskus çayı ve limon; ekşimsi ve canlandırıcı."
     },
     {
       "active": true,
       "title": "Ginger Shots",
       "price": 85,
       "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tercihen: Orange & Spinach"
+      "desc": "Tercihen: Orange & Spinach — Yoğun zencefil; portakal ya da ıspanaklı, enerji verici."
     },
     {
       "active": true,
       "title": "Chai Tea Latte (Soğuk)",
       "price": 150,
       "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Baharatlı çay ve süt; tarçın, karanfil ve zencefil notaları."
     },
     {
       "active": true,
       "title": "Chai Tea Latte (Sıcak)",
       "price": 130,
       "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Baharatlı çay ve süt; tarçın, karanfil ve zencefil notaları."
     },
     {
       "active": true,
       "title": "Soğuk Çikolata",
       "price": 130,
       "image": "https://images.unsplash.com/photo-1646388022965-2bfa12635f01?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Yoğun kakao ve soğuk süt; tatlı ve ferahlatıcı."
     },
     {
       "active": true,
       "title": "Sıcak Çikolata",
       "price": 130,
       "image": "https://images.unsplash.com/photo-1646388022965-2bfa12635f01?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Eritilmiş çikolata ve sıcak süt; yoğun ve tatlı."
     }
   ]
 }

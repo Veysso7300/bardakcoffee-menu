@@ -5,98 +5,98 @@
       "title": "Iced Espresso",
       "price": 120,
       "image": "https://images.unsplash.com/photo-1767471716700-2b3aa77b1ab6?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tercihen: Single / Double"
+      "desc": "Tercihen: Single / Double — Buz üstüne çift atımlık espresso; yoğun, keskin ve canlandırıcı."
     },
     {
       "active": true,
       "title": "Doubleshot Iced Shaken Espresso",
       "price": 150,
       "image": "https://images.unsplash.com/photo-1767471716700-2b3aa77b1ab6?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Çift shot espresso buzla çalkalanır; köpüklü ve yoğun."
     },
     {
       "active": true,
       "title": "Affogato",
       "price": 150,
       "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Sıcak espresso dondurma üzerine dökülür; tatlı ve kremamsı."
     },
     {
       "active": true,
       "title": "Iced Americano",
       "price": 140,
       "image": "https://images.unsplash.com/photo-1767471716700-2b3aa77b1ab6?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tercihen: Uzun Çekim / Süt"
+      "desc": "Tercihen: Uzun Çekim / Süt — Espresso ve soğuk suyun dengesi; hafif, temiz bir içim."
     },
     {
       "active": true,
       "title": "Iced Caffe Latte",
       "price": 145,
       "image": "https://images.unsplash.com/photo-1767471716700-2b3aa77b1ab6?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Espresso ve bol soğuk süt; yumuşak ve dengeli."
     },
     {
       "active": true,
       "title": "Iced Cortado",
       "price": 130,
       "image": "https://images.unsplash.com/photo-1767471716700-2b3aa77b1ab6?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "1/1 Espresso/Süt Oranı"
+      "desc": "1/1 Espresso/Süt Oranı — Eşit oranda espresso ve süt; güçlü ama pürüzsüz."
     },
     {
       "active": true,
       "title": "Iced Caramel Macchiato",
       "price": 155,
       "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Vanilyalı süt, espresso ve karamel sos; katmanlı ve tatlı."
     },
     {
       "active": true,
       "title": "Iced Latte Macchiato",
       "price": 155,
       "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Süt üzerine espresso katmanlanır; hafif ve ipeksi."
     },
     {
       "active": true,
       "title": "Iced Caffe Mocha",
       "price": 155,
       "image": "https://images.unsplash.com/photo-1646388022965-2bfa12635f01?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Espresso, çikolata ve süt; zengin ve tatlı."
     },
     {
       "active": true,
       "title": "Iced White Choc. Mocha",
       "price": 155,
       "image": "https://images.unsplash.com/photo-1646388022965-2bfa12635f01?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Beyaz çikolata ve espresso; kremamsı bir mola."
     },
     {
       "active": true,
       "title": "Iced Caramel Latte",
       "price": 155,
       "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Karamel sos, espresso ve soğuk süt; tatlı ve yumuşak."
     },
     {
       "active": true,
       "title": "Iced Salted Caramel Latte",
       "price": 155,
       "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Tuzlu karamelle dengelenen tatlı-tuzlu lezzet."
     },
     {
       "active": true,
       "title": "Iced Filter Coffee",
       "price": 140,
       "image": "https://images.unsplash.com/photo-1767471716700-2b3aa77b1ab6?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "Soğutulmuş filtre kahve; hafif, meyvemsi ve temiz."
     },
     {
       "active": true,
       "title": "Cold Brew",
       "price": 150,
       "image": "https://images.unsplash.com/photo-1767471716700-2b3aa77b1ab6?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": ""
+      "desc": "12 saat soğuk demlenir; yumuşak, az asitli, yoğun kafein."
     }
   ]
 }

@@ -1,140 +1,126 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#1c3f30" />
-  <title>Bardak Coffee — Menü</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#123023" />
+<title>Bardak Coffee — Menü</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-950:#0c1f17; --green-800:#123023; --green-700:#1c4632; --green-600:#2f6b52;
+    --cream:#f6f1e3; --paper:#efe7d1; --ink:#18140f; --muted:#6b6252;
+    --gold:#b98a2f; --rule:rgba(24,20,15,.14);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:'Work Sans',system-ui,sans-serif; color:var(--ink);
+    background:
+      repeating-linear-gradient(180deg, rgba(24,20,15,.025) 0px, rgba(24,20,15,.025) 1px, transparent 1px, transparent 34px),
+      var(--cream);
+  }
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+  .serif{font-family:'Fraunces',serif}
+  .wrap{max-width:900px;margin:0 auto;padding:16px 14px 90px}
 
-  <style>
-    :root{
-      --green:#1c3f30; --green-dark:#122a20; --green-light:#2c5a45;
-      --bg:#faf9f6; --card:#ffffff;
-      --text:#111111; --muted:#5a5a55;
-      --border:rgba(17,17,17,.10);
-      --r14:14px; --r16:16px; --r18:18px;
-      --shadow: 0 10px 28px rgba(17,17,17,.08);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
-      color:var(--text); background:var(--bg);
-    }
-    .wrap{max-width:980px;margin:0 auto;padding:14px 14px 92px;}
+  /* header */
+  header{
+    background:var(--green-800); color:#fff; border-radius:18px;
+    padding:20px 20px 18px; display:flex; align-items:flex-start; justify-content:space-between; gap:14px;
+    box-shadow:0 16px 34px rgba(18,48,35,.28);
+  }
+  header .eyebrow{ font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.6); margin-bottom:4px }
+  header h1{ margin:0; font-family:'Fraunces',serif; font-weight:700; font-size:26px }
+  header .sub{ margin:5px 0 0; color:rgba(255,255,255,.72); font-size:12.5px; font-style:italic; font-family:'Fraunces',serif }
+  .navbtns{ display:flex; gap:8px; flex-shrink:0 }
+  .btn{
+    display:inline-flex;gap:6px;align-items:center;justify-content:center;
+    padding:9px 11px;border-radius:10px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.08);color:#fff;text-decoration:none;
+    font-size:12px; white-space:nowrap;
+  }
+  .btn:active{transform:scale(.97)}
 
-    header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-    .left h1{margin:0;font-size:26px;color:var(--green-dark)}
-    .left .sub{margin:6px 0 0;color:var(--muted);font-size:13px}
-    .btn{
-      display:inline-flex;gap:8px;align-items:center;justify-content:center;
-      padding:10px 12px;border-radius:14px;border:1px solid var(--border);
-      background:#fff;color:var(--text);text-decoration:none;
-      box-shadow:0 4px 14px rgba(17,17,17,.06);
-      user-select:none; white-space:nowrap; font-size:13px;
-    }
-    .btn:active{transform:scale(.98)}
+  /* control ticket */
+  .sticky{ position:sticky; top:10px; z-index:10; margin-top:14px; }
+  .panel{
+    background:var(--paper); border:1px solid var(--rule); border-radius:16px;
+    padding:12px; box-shadow:0 12px 26px rgba(24,20,15,.10); position:relative;
+  }
+  .panel::before{
+    content:""; position:absolute; left:16px; right:16px; bottom:-1px; height:0;
+    border-bottom:1px dashed var(--rule);
+  }
+  .row{display:grid;grid-template-columns:1fr 118px;gap:8px}
+  input,select{
+    width:100%; padding:11px 12px; border-radius:10px; border:1px solid var(--rule);
+    background:#fff; color:var(--ink); outline:none; font-size:15px; font-family:inherit;
+  }
+  input::placeholder{color:rgba(24,20,15,.4)}
 
-    .sticky{
-      position:sticky; top:0; z-index:10;
-      margin-top:12px;
-      padding:10px 0 10px;
-      background: linear-gradient(180deg, rgba(250,249,246,.98), rgba(250,249,246,.75));
-      backdrop-filter: blur(10px);
-    }
-    .panel{
-      border:1px solid var(--border);
-      background:var(--card);
-      border-radius:var(--r18);
-      padding:10px;
-      box-shadow:var(--shadow);
-      display:grid; gap:10px;
-    }
-    .row{display:grid;grid-template-columns:1fr 120px;gap:8px;align-items:center}
-    input,select{
-      width:100%;
-      padding:11px 12px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:#fff;
-      color:var(--text);
-      outline:none;
-      font-size:16px;
-    }
-    input::placeholder{color:rgba(17,17,17,.35)}
+  .tabs{ display:flex; gap:6px; overflow:auto; margin-top:10px; padding:2px 0; -webkit-overflow-scrolling:touch; scrollbar-width:none }
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{
+    flex:0 0 auto; padding:8px 13px; border-radius:8px; border:1px dashed var(--rule);
+    background:#fff; font-size:12px; letter-spacing:.03em; cursor:pointer; color:var(--ink);
+  }
+  .tab.active{ background:var(--green-700); border-color:var(--green-700); color:#fff; }
 
-    .tabs{
-      display:flex; gap:8px; overflow:auto; padding:2px;
-      -webkit-overflow-scrolling:touch; scrollbar-width:none;
-    }
-    .tabs::-webkit-scrollbar{display:none}
-    .tab{
-      flex:0 0 auto;
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:#fff;
-      font-size:13px;
-      user-select:none;
-      color: var(--text);
-      cursor:pointer;
-    }
-    .tab.active{
-      border-color:var(--green);
-      background: var(--green);
-      color:#fff;
-    }
-    .meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:12px;padding:0 2px}
+  .meta{ display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:11px; margin-top:9px; padding:0 2px; }
+  .meta .mono{ color:var(--muted) }
 
-    .grid{display:grid;gap:10px;margin-top:14px}
-    .item{
-      display:grid;
-      grid-template-columns:72px 1fr auto;
-      gap:12px;
-      padding:12px;
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--r16);
-      box-shadow: 0 8px 22px rgba(17,17,17,.06);
-      align-items:center;
-    }
-    .thumb{
-      width:72px;height:72px;border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(28,63,48,.06);
-      overflow:hidden;
-      display:flex;align-items:center;justify-content:center;
-      color:rgba(17,17,17,.35);font-size:20px;
-    }
-    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .name{font-weight:800;font-size:15px;line-height:1.2}
-    .desc{margin-top:4px;color:var(--muted);font-size:13px;line-height:1.25}
-    .price{
-      padding:9px 10px;border-radius:999px;
-      border:1px solid var(--green);
-      background:rgba(28,63,48,.08);
-      color:var(--green-dark);
-      font-weight:800;white-space:nowrap;margin-left:6px;font-size:13px;
-      text-align:center;
-    }
-    .price .sizes{display:flex;flex-direction:column;gap:2px;font-size:11px}
-    .empty{color:var(--muted);padding:10px 2px;}
-    @media (min-width:760px){
-      .row{grid-template-columns:1fr 160px}
-      .item{grid-template-columns:84px 1fr auto}
-      .thumb{width:84px;height:84px}
-      .left h1{font-size:32px}
-    }
-  </style>
+  /* category divider */
+  .catdiv{
+    display:flex; align-items:center; gap:10px; margin:26px 2px 12px;
+  }
+  .catdiv .dot{ width:7px; height:7px; border-radius:50%; background:var(--green-700); flex-shrink:0 }
+  .catdiv .name{ font-family:'Fraunces',serif; font-weight:600; font-size:16px; white-space:nowrap }
+  .catdiv .rule{ flex:1; border-top:1px dashed var(--rule) }
+  .catdiv .count{ font-size:11px; color:var(--muted) }
+
+  .grid{ display:flex; flex-direction:column; gap:8px; }
+  .item{
+    display:grid; grid-template-columns:56px 1fr auto; gap:12px;
+    padding:12px; background:#fff; border:1px solid var(--rule); border-radius:12px;
+    align-items:center; box-shadow:0 3px 10px rgba(24,20,15,.04);
+  }
+  .thumb{
+    width:56px;height:56px;border-radius:10px; overflow:hidden;
+    border:1px solid var(--rule); background:var(--paper);
+    display:flex;align-items:center;justify-content:center; font-size:18px; flex-shrink:0;
+  }
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .name{ display:flex; align-items:center; gap:6px; font-weight:600; font-size:14.5px; line-height:1.25 }
+  .name .temp{ font-size:11px; flex-shrink:0 }
+  .desc{ margin-top:3px; color:var(--muted); font-size:12px; font-style:italic; line-height:1.3; font-family:'Fraunces',serif }
+  .price{
+    font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px;
+    color:var(--green-800); white-space:nowrap; text-align:right;
+  }
+  .price .sizes{ display:flex; flex-direction:column; gap:2px; font-size:11px; text-align:right }
+  .price .sizes b{ font-size:12.5px }
+  .empty{ color:var(--muted); padding:20px 4px; text-align:center; font-style:italic; font-family:'Fraunces',serif }
+
+  @media (min-width:760px){
+    header h1{font-size:32px}
+    .row{grid-template-columns:1fr 160px}
+    .item{grid-template-columns:70px 1fr auto}
+    .thumb{width:70px;height:70px}
+  }
+</style>
 </head>
 
 <body>
   <div class="wrap">
     <header>
-      <div class="left">
+      <div>
+        <div class="eyebrow">Bardak Coffee</div>
         <h1>Menü</h1>
-        <div class="sub">Bardak Coffee — Sekmelerle kategori seç</div>
+        <p class="sub">bugün ne içilir?</p>
       </div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
+      <div class="navbtns">
         <a class="btn" href="/">🏠 Ana Sayfa</a>
         <a class="btn" href="/admin/">✏️ Admin</a>
       </div>
@@ -149,30 +135,29 @@
             <option value="0">Tümü</option>
           </select>
         </div>
-
         <div class="tabs" id="tabs"></div>
-
         <div class="meta">
           <span id="status">Menü yükleniyor…</span>
-          <span id="meta"></span>
+          <span class="mono" id="meta"></span>
         </div>
       </div>
     </div>
 
-    <div class="grid" id="grid"></div>
+    <div id="content"></div>
   </div>
 
 <script>
   const SOURCES = [
-    { cat: "Iced Coffees",       url: "/data/menu/iced-coffees.json" },
-    { cat: "Sıcak Kahveler",     url: "/data/menu/sicak-kahveler.json" },
-    { cat: "Non-Coffee",         url: "/data/menu/non-coffee.json" },
-    { cat: "Pastalar / Kekler",  url: "/data/menu/pastalar-kekler.json" },
-    { cat: "Bitki Çayları",      url: "/data/menu/bitki-caylari.json" },
-    { cat: "Kruvasan",           url: "/data/menu/kruvasan.json" },
+    { cat: "Iced Coffees",       url: "/data/menu/iced-coffees.json",   temp: "🧊" },
+    { cat: "Sıcak Kahveler",     url: "/data/menu/sicak-kahveler.json", temp: "🔥" },
+    { cat: "Non-Coffee",         url: "/data/menu/non-coffee.json",     temp: "" },
+    { cat: "Bitki Çayları",      url: "/data/menu/bitki-caylari.json",  temp: "🌿" },
+    { cat: "Pastalar / Kekler",  url: "/data/menu/pastalar-kekler.json",temp: "" },
+    { cat: "Kruvasan",           url: "/data/menu/kruvasan.json",       temp: "" },
   ];
+  const TEMP = Object.fromEntries(SOURCES.map(s => [s.cat, s.temp]));
 
-  const elGrid = document.getElementById("grid");
+  const elContent = document.getElementById("content");
   const elQ = document.getElementById("q");
   const elOnlyActive = document.getElementById("onlyActive");
   const elTabs = document.getElementById("tabs");
@@ -204,34 +189,60 @@
   function priceBlock(it){
     if (it.price_kucuk !== undefined || it.price_orta !== undefined){
       return `<div class="price"><div class="sizes">
-        <span>Küçük ${fmtTRY(it.price_kucuk)}</span>
-        <span>Orta ${fmtTRY(it.price_orta)}</span>
+        <span>K <b>${fmtTRY(it.price_kucuk)}</b></span>
+        <span>O <b>${fmtTRY(it.price_orta)}</b></span>
       </div></div>`;
     }
     return `<div class="price">${fmtTRY(it.price)}</div>`;
   }
 
-  function render(items){
-    elGrid.innerHTML = "";
-    if (!items.length){
-      elGrid.innerHTML = `<div class="empty">Sonuç yok. Aramayı/sekme filtresini değiştir.</div>`;
-      return;
-    }
-    for (const it of items){
-      const img = it.image ? String(it.image) : "";
-      const desc = it.desc || "";
-      const card = document.createElement("div");
-      card.className = "item";
-      card.innerHTML = `
-        <div class="thumb">${img ? `<img src="${img}" alt="">` : "☕"}</div>
+  function itemCard(it){
+    const img = it.image ? String(it.image) : "";
+    const desc = it.desc || "";
+    const temp = TEMP[it.category] || "";
+    return `
+      <div class="item">
+        <div class="thumb">${img ? `<img src="${img}" alt="" loading="lazy">` : "☕"}</div>
         <div>
-          <div class="name">${it.title || "-"}</div>
+          <div class="name">${temp ? `<span class="temp">${temp}</span>` : ""}${it.title || "-"}</div>
           ${desc ? `<div class="desc">${desc}</div>` : ``}
         </div>
         ${priceBlock(it)}
-      `;
-      elGrid.appendChild(card);
+      </div>`;
+  }
+
+  function render(items){
+    elContent.innerHTML = "";
+    if (!items.length){
+      elContent.innerHTML = `<div class="empty">Sonuç yok — aramayı ya da sekme filtresini değiştir.</div>`;
+      return;
     }
+
+    if (activeTab !== "Tümü"){
+      elContent.innerHTML = `<div class="grid">${items.map(itemCard).join("")}</div>`;
+      return;
+    }
+
+    // grouped by category with ticket-style dividers
+    const groups = new Map();
+    for (const it of items){
+      if (!groups.has(it.category)) groups.set(it.category, []);
+      groups.get(it.category).push(it);
+    }
+    let html = "";
+    for (const s of SOURCES){
+      const arr = groups.get(s.cat);
+      if (!arr || !arr.length) continue;
+      html += `
+        <div class="catdiv">
+          <span class="dot"></span>
+          <span class="name">${s.temp ? s.temp + " " : ""}${s.cat}</span>
+          <span class="rule"></span>
+          <span class="count mono">${arr.length}</span>
+        </div>
+        <div class="grid">${arr.map(itemCard).join("")}</div>`;
+    }
+    elContent.innerHTML = html;
   }
 
   function apply(){
@@ -257,7 +268,7 @@
     });
 
     render(items);
-    elMeta.textContent = `Gösterilen: ${items.length} / Toplam: ${allItems.length}`;
+    elMeta.textContent = `${items.length} / ${allItems.length} ürün`;
   }
 
   async function load(){
@@ -280,7 +291,7 @@
       apply();
     }catch(e){
       elStatus.textContent = "Menü yüklenemedi ❌";
-      elGrid.innerHTML = `<div class="empty" style="color:#b23b3b">Hata: ${String(e.message||e)}</div>`;
+      elContent.innerHTML = `<div class="empty" style="color:#b23b3b">Hata: ${String(e.message||e)}</div>`;
     }
   }
 
