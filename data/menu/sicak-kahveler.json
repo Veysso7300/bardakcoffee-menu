@@ -135,8 +135,17 @@
       "active": true,
       "title": "Black Eye",
       "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Filtre kahveye çift shot espresso eklenir; maksimum kafein. (Orta boy)",
-      "price": 170
+      "desc": "Filtre kahveye çift shot espresso eklenir; maksimum kafein.",
+      "price_kucuk": 160,
+      "price_orta": 170
+    },
+    {
+      "active": true,
+      "title": "Lotus",
+      "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Lotus bisküvi sosu ve espresso; karamelimsi, tatlı bir lezzet.",
+      "price_kucuk": 145,
+      "price_orta": 155
     }
   ]
 }

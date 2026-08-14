@@ -120,6 +120,90 @@
       "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
       "desc": "Buzla blend edilmiş çilek; tatlı ve meyvemsi.",
       "price": 135
+    },
+    {
+      "active": true,
+      "title": "Orman Meyveli Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş orman meyveleri; ekşimsi ve serinletici.",
+      "price": 135
+    },
+    {
+      "active": true,
+      "title": "Ballı Süt",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Soğuk süt ve doğal bal; hafif ve dengeli tatlılık.",
+      "price": 90
+    },
+    {
+      "active": true,
+      "title": "Çilekli Süt",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Soğuk süt ve çilek; tatlı ve meyvemsi.",
+      "price": 90
+    },
+    {
+      "active": true,
+      "title": "Karpuz-Kavun Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş karpuz ve kavun; ferahlatıcı ikili.",
+      "price": 135
+    },
+    {
+      "active": true,
+      "title": "Mango-Ananas Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş mango ve ananas; tropikal bir serinlik.",
+      "price": 135
+    },
+    {
+      "active": true,
+      "title": "Karpuz-Çilek Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş karpuz ve çilek; tatlı ve ferahlatıcı.",
+      "price": 135
+    },
+    {
+      "active": true,
+      "title": "Limonlu Maden Suyu",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Maden suyu ve taze limon; hafif ve canlandırıcı.",
+      "price": 80
+    },
+    {
+      "active": true,
+      "title": "Milkshake Çikolatalı",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Çikolatalı, kremamsı ve yoğun bir milkshake.",
+      "price": 145
+    },
+    {
+      "active": true,
+      "title": "Milkshake Çilekli",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Çilekli, kremamsı ve tatlı bir milkshake.",
+      "price": 145
+    },
+    {
+      "active": true,
+      "title": "Matcha Latte",
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Japon matcha çayı ve süt; toprağımsı ve dengeli.",
+      "price": 155
+    },
+    {
+      "active": false,
+      "title": "Nar Suyu",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Taze sıkılmış nar suyu.",
+      "price": 130
+    },
+    {
+      "active": false,
+      "title": "Portakal Suyu",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Taze sıkılmış portakal suyu.",
+      "price": 130
     }
   ]
 }
