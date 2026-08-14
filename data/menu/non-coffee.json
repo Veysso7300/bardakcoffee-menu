@@ -1,11 +1,12 @@
 {
   "items": [
-    { "active": true, "title": "Sıcak Çikolata", "price": 100, "image": "", "desc": "" },
-    { "active": true, "title": "Chai Latte", "price": 105, "image": "", "desc": "" },
-    { "active": true, "title": "Matcha Latte", "price": 115, "image": "", "desc": "" },
-    { "active": true, "title": "Limonata", "price": 90, "image": "", "desc": "" },
-    { "active": true, "title": "Meyveli Soda", "price": 85, "image": "", "desc": "" },
-    { "active": true, "title": "Çikolatalı Milkshake", "price": 120, "image": "", "desc": "" },
-    { "active": true, "title": "Karamelli Milkshake", "price": 120, "image": "", "desc": "" }
+    { "active": true, "title": "Limonata", "price": 130, "image": "", "desc": "Tercihen: Sade / Çilek / Nane" },
+    { "active": true, "title": "Cool Lime", "price": 130, "image": "", "desc": "" },
+    { "active": true, "title": "Lemon Hibiscus", "price": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Ginger Shots", "price": 85, "image": "", "desc": "Tercihen: Orange & Spinach" },
+    { "active": true, "title": "Chai Tea Latte (Soğuk)", "price": 150, "image": "", "desc": "" },
+    { "active": true, "title": "Chai Tea Latte (Sıcak)", "price": 130, "image": "", "desc": "" },
+    { "active": true, "title": "Soğuk Çikolata", "price": 130, "image": "", "desc": "" },
+    { "active": true, "title": "Sıcak Çikolata", "price": 130, "image": "", "desc": "" }
   ]
 }

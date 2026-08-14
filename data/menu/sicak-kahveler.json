@@ -1,13 +1,19 @@
 {
   "items": [
-    { "active": true, "title": "Espresso", "price_kucuk": 60, "price_orta": 75, "image": "", "desc": "" },
-    { "active": true, "title": "Double Espresso", "price_kucuk": 75, "price_orta": 90, "image": "", "desc": "" },
-    { "active": true, "title": "Americano", "price_kucuk": 80, "price_orta": 95, "image": "", "desc": "" },
-    { "active": true, "title": "Latte", "price_kucuk": 100, "price_orta": 115, "image": "", "desc": "" },
-    { "active": true, "title": "Cappuccino", "price_kucuk": 100, "price_orta": 115, "image": "", "desc": "" },
-    { "active": true, "title": "Mocha", "price_kucuk": 110, "price_orta": 125, "image": "", "desc": "" },
-    { "active": true, "title": "Caramel Macchiato", "price_kucuk": 115, "price_orta": 130, "image": "", "desc": "" },
-    { "active": true, "title": "Filtre Kahve", "price_kucuk": 90, "price_orta": 105, "image": "", "desc": "" },
-    { "active": true, "title": "Türk Kahvesi", "price_kucuk": 80, "price_orta": 95, "image": "", "desc": "" }
+    { "active": true, "title": "Espresso", "price_kucuk": 90, "price_orta": 100, "image": "", "desc": "Tercihen: Single / Double" },
+    { "active": true, "title": "Americano", "price_kucuk": 130, "price_orta": 140, "image": "", "desc": "Tercihe bağlı süt eklenebilir" },
+    { "active": true, "title": "Latte", "price_kucuk": 135, "price_orta": 145, "image": "", "desc": "" },
+    { "active": true, "title": "Cappuccino", "price_kucuk": 135, "price_orta": 145, "image": "", "desc": "Tercihe bağlı kakao eklenebilir" },
+    { "active": true, "title": "Flat White", "price_kucuk": 140, "price_orta": 150, "image": "", "desc": "" },
+    { "active": true, "title": "Cortado", "price_kucuk": 130, "price_orta": 140, "image": "", "desc": "1/1 Espresso/Süt Oranı" },
+    { "active": true, "title": "Filtre Kahve", "price_kucuk": 130, "price_orta": 140, "image": "", "desc": "" },
+    { "active": true, "title": "Türk Kahvesi", "price_kucuk": 90, "price_orta": 100, "image": "", "desc": "" },
+    { "active": true, "title": "Özel Demleme", "price_kucuk": 180, "price_orta": 190, "image": "", "desc": "Chemex / V60" },
+    { "active": true, "title": "Caramel Macchiato", "price_kucuk": 145, "price_orta": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Latte Macchiato", "price_kucuk": 145, "price_orta": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Caffe Mocha", "price_kucuk": 145, "price_orta": 155, "image": "", "desc": "" },
+    { "active": true, "title": "White Choc. Mocha", "price_kucuk": 145, "price_orta": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Caramel Latte", "price_kucuk": 145, "price_orta": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Salted Caramel Latte", "price_kucuk": 145, "price_orta": 155, "image": "", "desc": "" }
   ]
 }

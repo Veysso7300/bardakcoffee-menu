@@ -1,10 +1,13 @@
 {
   "items": [
-    { "active": true, "title": "Cheesecake", "price": 130, "image": "", "desc": "" },
-    { "active": true, "title": "San Sebastian Cheesecake", "price": 140, "image": "", "desc": "" },
-    { "active": true, "title": "Brownie", "price": 110, "image": "", "desc": "" },
-    { "active": true, "title": "Havuçlu Kek", "price": 100, "image": "", "desc": "" },
-    { "active": true, "title": "Çikolatalı Kek", "price": 110, "image": "", "desc": "" },
-    { "active": true, "title": "Limonlu Kek", "price": 100, "image": "", "desc": "" }
+    { "active": true, "title": "Blueberry Cheesecake", "price": 150, "image": "", "desc": "" },
+    { "active": true, "title": "Paris Brest", "price": 150, "image": "", "desc": "" },
+    { "active": true, "title": "Magnolia", "price": 140, "image": "", "desc": "" },
+    { "active": true, "title": "Mocha Mousse", "price": 150, "image": "", "desc": "" },
+    { "active": true, "title": "Glutensiz Cookie", "price": 100, "image": "", "desc": "" },
+    { "active": true, "title": "Choco", "price": 130, "image": "", "desc": "" },
+    { "active": true, "title": "Donuts", "price": 90, "image": "", "desc": "" },
+    { "active": true, "title": "Spoonful", "price": 140, "image": "", "desc": "" },
+    { "active": true, "title": "Cheesecakes", "price": 150, "image": "", "desc": "Blueberry / Lava" }
   ]
 }

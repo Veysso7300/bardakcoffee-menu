@@ -1,12 +1,18 @@
 {
   "items": [
-    { "active": true, "title": "Iced Americano", "price": 90, "image": "", "desc": "" },
-    { "active": true, "title": "Iced Latte", "price": 110, "image": "", "desc": "" },
-    { "active": true, "title": "Iced Mocha", "price": 120, "image": "", "desc": "" },
-    { "active": true, "title": "Iced Caramel Macchiato", "price": 125, "image": "", "desc": "" },
-    { "active": true, "title": "Iced White Mocha", "price": 125, "image": "", "desc": "" },
-    { "active": true, "title": "Iced Filtre Kahve", "price": 100, "image": "", "desc": "" },
-    { "active": true, "title": "Cold Brew", "price": 110, "image": "", "desc": "" },
-    { "active": true, "title": "Frappé", "price": 120, "image": "", "desc": "" }
+    { "active": true, "title": "Iced Espresso", "price": 120, "image": "", "desc": "Tercihen: Single / Double" },
+    { "active": true, "title": "Doubleshot Iced Shaken Espresso", "price": 150, "image": "", "desc": "" },
+    { "active": true, "title": "Affogato", "price": 150, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Americano", "price": 140, "image": "", "desc": "Tercihen: Uzun Çekim / Süt" },
+    { "active": true, "title": "Iced Caffe Latte", "price": 145, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Cortado", "price": 130, "image": "", "desc": "1/1 Espresso/Süt Oranı" },
+    { "active": true, "title": "Iced Caramel Macchiato", "price": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Latte Macchiato", "price": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Caffe Mocha", "price": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Iced White Choc. Mocha", "price": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Caramel Latte", "price": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Salted Caramel Latte", "price": 155, "image": "", "desc": "" },
+    { "active": true, "title": "Iced Filter Coffee", "price": 140, "image": "", "desc": "" },
+    { "active": true, "title": "Cold Brew", "price": 150, "image": "", "desc": "" }
   ]
 }
