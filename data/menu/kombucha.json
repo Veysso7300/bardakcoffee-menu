@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "active": true,
+      "title": "Sade Kombucha",
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Doğal fermente çay; hafif ekşi ve probiyotik.",
+      "price": 160
+    },
+    {
+      "active": true,
+      "title": "Yasemin Kombucha",
+      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Yasemin aromalı fermente çay; hafif çiçeksi.",
+      "price": 160
+    }
+  ]
+}

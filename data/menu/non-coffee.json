@@ -2,59 +2,124 @@
   "items": [
     {
       "active": true,
-      "title": "Limonata",
-      "price": 130,
+      "title": "Su",
       "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tercihen: Sade / Çilek / Nane — Taze sıkılmış limon; tercihe göre çilek ya da nane ile."
+      "desc": "Doğal kaynak suyu.",
+      "price": 25
+    },
+    {
+      "active": true,
+      "title": "Maden Suyu",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Doğal maden suyu.",
+      "price": 50
+    },
+    {
+      "active": true,
+      "title": "Limonata",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Taze sıkılmış limon; tercihe göre çilek ya da nane ile.",
+      "price": 130
     },
     {
       "active": true,
       "title": "Cool Lime",
-      "price": 130,
       "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Misket limonu ve nane; ferahlatıcı bir yaz içeceği."
+      "desc": "Misket limonu ve nane; ferahlatıcı bir yaz içeceği.",
+      "price": 130
     },
     {
       "active": true,
-      "title": "Lemon Hibiscus",
-      "price": 155,
+      "title": "Kuzu Kulağı",
       "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Hibiskus çayı ve limon; ekşimsi ve canlandırıcı."
+      "desc": "Ekşimsi kuzukulağı otuyla hazırlanan ferahlatıcı içecek.",
+      "price": 140
     },
     {
       "active": true,
-      "title": "Ginger Shots",
-      "price": 85,
+      "title": "Pitaya",
       "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tercihen: Orange & Spinach — Yoğun zencefil; portakal ya da ıspanaklı, enerji verici."
+      "desc": "Ejder meyvesiyle hazırlanan canlı renkli, meyvemsi içecek.",
+      "price": 140
     },
     {
       "active": true,
-      "title": "Chai Tea Latte (Soğuk)",
-      "price": 150,
+      "title": "Churchill",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Klasik ve ferahlatıcı bir içecek.",
+      "price": 80
+    },
+    {
+      "active": true,
+      "title": "Chai Tea Latte",
       "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Baharatlı çay ve süt; tarçın, karanfil ve zencefil notaları."
+      "desc": "Baharatlı çay ve süt; tarçın, karanfil ve zencefil notaları.",
+      "price_kucuk": 130,
+      "price_orta": 140
     },
     {
       "active": true,
-      "title": "Chai Tea Latte (Sıcak)",
-      "price": 130,
-      "image": "https://images.unsplash.com/photo-1577016029703-cc22a7c0c28c?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Baharatlı çay ve süt; tarçın, karanfil ve zencefil notaları."
-    },
-    {
-      "active": true,
-      "title": "Soğuk Çikolata",
-      "price": 130,
-      "image": "https://images.unsplash.com/photo-1646388022965-2bfa12635f01?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Yoğun kakao ve soğuk süt; tatlı ve ferahlatıcı."
+      "title": "Iced Chai Tea Latte",
+      "image": "https://images.unsplash.com/photo-1767471716700-2b3aa77b1ab6?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Baharatlı çay ve süt, buzla serinletilir.",
+      "price": 150
     },
     {
       "active": true,
       "title": "Sıcak Çikolata",
-      "price": 130,
       "image": "https://images.unsplash.com/photo-1646388022965-2bfa12635f01?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Eritilmiş çikolata ve sıcak süt; yoğun ve tatlı."
+      "desc": "Eritilmiş çikolata ve sıcak süt; yoğun ve tatlı.",
+      "price_kucuk": 130,
+      "price_orta": 140
+    },
+    {
+      "active": true,
+      "title": "Iced Chocolate",
+      "image": "https://images.unsplash.com/photo-1646388022965-2bfa12635f01?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Soğuk çikolata; yoğun kakao ile ferahlatıcı.",
+      "price": 130
+    },
+    {
+      "active": true,
+      "title": "Mango Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş mango; tatlı ve serinletici.",
+      "price": 135
+    },
+    {
+      "active": true,
+      "title": "Şeftali Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş şeftali; tatlı ve serinletici.",
+      "price": 135
+    },
+    {
+      "active": true,
+      "title": "Karpuz Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş karpuz; ferahlatıcı bir yaz içeceği.",
+      "price": 135
+    },
+    {
+      "active": true,
+      "title": "Kavun Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş kavun; tatlı ve serinletici.",
+      "price": 135
+    },
+    {
+      "active": true,
+      "title": "Ananas Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş ananas; tropikal ve ferahlatıcı.",
+      "price": 135
+    },
+    {
+      "active": true,
+      "title": "Çilek Frozen",
+      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Buzla blend edilmiş çilek; tatlı ve meyvemsi.",
+      "price": 135
     }
   ]
 }

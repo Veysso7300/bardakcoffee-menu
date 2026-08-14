@@ -27,33 +27,41 @@ collections:
             fields:
               - { label: "Aktif (menüde görünsün)", name: "active", widget: "boolean", default: true }
               - { label: "Ürün Adı", name: "title", widget: "string" }
-              - { label: "Fiyat (₺)", name: "price", widget: "number", value_type: "float", min: 0 }
+              - { label: "Fiyat (₺)", name: "price", widget: "number", value_type: "float", min: 0, required: false }
               - { label: "Fotoğraf", name: "image", widget: "image", required: false }
               - { label: "Açıklama", name: "desc", widget: "string", required: false }
 
       - name: "sicak_kahveler"
-        label: "🔥 Sıcak Kahveler (Küçük / Orta)"
+        label: "🔥 Sıcak Kahveler (Espresso & More)"
         file: "data/menu/sicak-kahveler.json"
         format: "json"
         editor: { preview: false }
-        fields:
+        fields: &item_fields_sized
           - label: "Ürünler"
             name: "items"
             widget: "list"
             collapsed: true
             minimize_collapsed: true
-            summary: "{{fields.active}} • {{fields.title}} — K:{{fields.price_kucuk}}₺ / O:{{fields.price_orta}}₺"
+            summary: "{{fields.active}} • {{fields.title}} — {{fields.price}}₺ / K:{{fields.price_kucuk}}₺ / O:{{fields.price_orta}}₺"
             fields:
               - { label: "Aktif (menüde görünsün)", name: "active", widget: "boolean", default: true }
               - { label: "Ürün Adı", name: "title", widget: "string" }
-              - { label: "Fiyat - Küçük Boy (₺)", name: "price_kucuk", widget: "number", value_type: "float", min: 0 }
-              - { label: "Fiyat - Orta Boy (₺)", name: "price_orta", widget: "number", value_type: "float", min: 0 }
+              - { label: "Tek Boy Fiyat (₺) — sadece tek boy varsa doldur", name: "price", widget: "number", value_type: "float", min: 0, required: false }
+              - { label: "Fiyat - Küçük Boy (₺)", name: "price_kucuk", widget: "number", value_type: "float", min: 0, required: false }
+              - { label: "Fiyat - Orta Boy (₺)", name: "price_orta", widget: "number", value_type: "float", min: 0, required: false }
               - { label: "Fotoğraf", name: "image", widget: "image", required: false }
               - { label: "Açıklama", name: "desc", widget: "string", required: false }
 
       - name: "non_coffee"
         label: "🥤 Non-Coffee"
         file: "data/menu/non-coffee.json"
+        format: "json"
+        editor: { preview: false }
+        fields: *item_fields_sized
+
+      - name: "kombucha"
+        label: "🫙 Kombucha"
+        file: "data/menu/kombucha.json"
         format: "json"
         editor: { preview: false }
         fields: *item_fields
@@ -73,7 +81,7 @@ collections:
         fields: *item_fields
 
       - name: "kruvasan"
-        label: "🥐 Kruvasan"
+        label: "🥐 Kruvasan & Çörekler"
         file: "data/menu/kruvasan.json"
         format: "json"
         editor: { preview: false }

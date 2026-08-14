@@ -2,123 +2,141 @@
   "items": [
     {
       "active": true,
-      "title": "Espresso",
-      "price_kucuk": 90,
-      "price_orta": 100,
+      "title": "Espresso (Single)",
       "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tercihen: Single / Double — Yoğun ve konsantre; kahvenin saf hâli."
+      "desc": "Yoğun ve konsantre; kahvenin saf hâli.",
+      "price": 90
+    },
+    {
+      "active": true,
+      "title": "Espresso (Double)",
+      "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Çift shot; daha yoğun ve güçlü.",
+      "price": 100
     },
     {
       "active": true,
       "title": "Americano",
-      "price_kucuk": 130,
-      "price_orta": 140,
       "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tercihe bağlı süt eklenebilir — Espresso sıcak suyla uzatılır; hafif ve dengeli."
+      "desc": "Espresso sıcak suyla uzatılır; hafif ve dengeli.",
+      "price_kucuk": 130,
+      "price_orta": 135
     },
     {
       "active": true,
       "title": "Latte",
-      "price_kucuk": 135,
-      "price_orta": 145,
       "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Espresso ve buharda ısıtılmış bol süt; yumuşak içim."
+      "desc": "Espresso ve buharda ısıtılmış bol süt; yumuşak içim.",
+      "price_kucuk": 135,
+      "price_orta": 140
     },
     {
       "active": true,
       "title": "Cappuccino",
-      "price_kucuk": 135,
-      "price_orta": 145,
       "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tercihe bağlı kakao eklenebilir — Espresso, süt ve yoğun köpük; klasik denge."
+      "desc": "Espresso, süt ve yoğun köpük; klasik denge.",
+      "price_kucuk": 135,
+      "price_orta": 140
     },
     {
       "active": true,
       "title": "Flat White",
-      "price_kucuk": 140,
-      "price_orta": 150,
       "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "İnce mikroköpük süt, espressonun yoğunluğunu öne çıkarır."
+      "desc": "İnce mikroköpük süt, espressonun yoğunluğunu öne çıkarır.",
+      "price_kucuk": 140,
+      "price_orta": 150
     },
     {
       "active": true,
       "title": "Cortado",
-      "price_kucuk": 130,
-      "price_orta": 140,
       "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "1/1 Espresso/Süt Oranı — Eşit espresso/süt oranı; güçlü ama pürüzsüz."
+      "desc": "Eşit espresso/süt oranı; güçlü ama pürüzsüz.",
+      "price": 130
     },
     {
       "active": true,
       "title": "Filtre Kahve",
-      "price_kucuk": 130,
-      "price_orta": 140,
       "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Damla demleme yöntemiyle hazırlanır; hafif ve aromatik."
+      "desc": "Damla demleme yöntemiyle hazırlanır; hafif ve aromatik.",
+      "price_kucuk": 130,
+      "price_orta": 135
     },
     {
       "active": true,
       "title": "Türk Kahvesi",
-      "price_kucuk": 90,
-      "price_orta": 100,
       "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Cezvede pişirilen geleneksel kahve; yoğun ve köpüklü."
+      "desc": "Cezvede pişirilen geleneksel kahve; yoğun ve köpüklü.",
+      "price": 90
     },
     {
       "active": true,
-      "title": "Özel Demleme",
-      "price_kucuk": 180,
-      "price_orta": 190,
+      "title": "Chemex / V60",
       "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Chemex / V60 — Chemex ya da V60 ile elde demleme; incelikli ve temiz."
-    },
-    {
-      "active": true,
-      "title": "Caramel Macchiato",
-      "price_kucuk": 145,
-      "price_orta": 155,
-      "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Vanilyalı süt üstüne espresso ve karamel; katmanlı ve tatlı."
+      "desc": "Elde demleme yöntemi; kahvenin inceliklerini öne çıkarır.",
+      "price": 180
     },
     {
       "active": true,
       "title": "Latte Macchiato",
-      "price_kucuk": 145,
-      "price_orta": 155,
       "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Süt üzerine espresso katmanlanır; hafif ve ipeksi."
+      "desc": "Süt üzerine espresso katmanlanır; hafif ve ipeksi.",
+      "price_kucuk": 145,
+      "price_orta": 155
     },
     {
       "active": true,
       "title": "Caffe Mocha",
-      "price_kucuk": 145,
-      "price_orta": 155,
       "image": "https://images.unsplash.com/photo-1646388022965-2bfa12635f01?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Espresso, çikolata ve süt; zengin ve tatlı."
+      "desc": "Espresso, çikolata ve süt; zengin ve tatlı.",
+      "price_kucuk": 145,
+      "price_orta": 155
     },
     {
       "active": true,
-      "title": "White Choc. Mocha",
+      "title": "Caramel Macchiato",
+      "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Vanilyalı süt üstüne espresso ve karamel; katmanlı ve tatlı.",
       "price_kucuk": 145,
-      "price_orta": 155,
+      "price_orta": 155
+    },
+    {
+      "active": true,
+      "title": "White Chocolate Mocha",
       "image": "https://images.unsplash.com/photo-1646388022965-2bfa12635f01?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Beyaz çikolata ve espresso; kremamsı ve tatlı."
+      "desc": "Beyaz çikolata ve espresso; kremamsı ve tatlı.",
+      "price_kucuk": 145,
+      "price_orta": 155
     },
     {
       "active": true,
       "title": "Caramel Latte",
-      "price_kucuk": 145,
-      "price_orta": 155,
       "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Karamel sos, espresso ve süt; tatlı ve yumuşak."
+      "desc": "Karamel sos, espresso ve süt; tatlı ve yumuşak.",
+      "price_kucuk": 145,
+      "price_orta": 155
     },
     {
       "active": true,
       "title": "Salted Caramel Latte",
-      "price_kucuk": 145,
-      "price_orta": 155,
       "image": "https://images.unsplash.com/photo-1659882617003-4a0c077e2768?fm=jpg&q=60&w=800&auto=format&fit=crop",
-      "desc": "Tuzlu karamelle dengelenen tatlı-tuzlu lezzet."
+      "desc": "Tuzlu karamelle dengelenen tatlı-tuzlu lezzet.",
+      "price_kucuk": 145,
+      "price_orta": 145
+    },
+    {
+      "active": true,
+      "title": "Red Eye",
+      "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Filtre kahveye bir shot espresso eklenir; sert bir enerji artışı.",
+      "price_kucuk": 150,
+      "price_orta": 160
+    },
+    {
+      "active": true,
+      "title": "Black Eye",
+      "image": "https://images.unsplash.com/photo-1544055931-0f1e0a14c892?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "desc": "Filtre kahveye çift shot espresso eklenir; maksimum kafein. (Orta boy)",
+      "price": 170
     }
   ]
 }
