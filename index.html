@@ -217,14 +217,15 @@
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", (user) => {
-        // Davet / şifre sıfırlama linkiyle gelindiyse formu otomatik aç
+        // Sadece davet / şifre sıfırlama linkiyle gelindiyse formu aç ve sonrasında panele yönlendir
         const hash = window.location.hash || "";
-        if (hash.includes("invite_token") || hash.includes("recovery_token") || hash.includes("confirmation_token")) {
+        const isAuthFlow = hash.includes("invite_token") || hash.includes("recovery_token") || hash.includes("confirmation_token");
+        if (isAuthFlow) {
           window.netlifyIdentity.open();
+          window.netlifyIdentity.on("login", () => {
+            window.location.href = "/panel/";
+          });
         }
-      });
-      window.netlifyIdentity.on("login", () => {
-        window.location.href = "/admin/";
       });
     }
   </script>
