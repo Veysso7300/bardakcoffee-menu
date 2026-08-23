@@ -17,28 +17,28 @@
     {
       "active": true,
       "title": "Limonata",
-      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "/uploads/limonata-real.jpg",
       "desc": "Taze sıkılmış limon; tercihe göre çilek ya da nane ile.",
       "price": 130
     },
     {
       "active": true,
       "title": "Cool Lime",
-      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "/uploads/coollime-real.jpg",
       "desc": "Misket limonu ve nane; ferahlatıcı bir yaz içeceği.",
       "price": 130
     },
     {
       "active": true,
       "title": "Kuzu Kulağı",
-      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "/uploads/kuzukulagi-real.jpg",
       "desc": "Ekşimsi kuzukulağı otuyla hazırlanan ferahlatıcı içecek.",
       "price": 140
     },
     {
       "active": true,
       "title": "Pitaya",
-      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "/uploads/pitaya-real.jpg",
       "desc": "Ejder meyvesiyle hazırlanan canlı renkli, meyvemsi içecek.",
       "price": 140
     },
@@ -96,7 +96,7 @@
     {
       "active": true,
       "title": "Karpuz Frozen",
-      "image": "https://images.unsplash.com/photo-1695490454828-f8df9109da43?fm=jpg&q=60&w=800&auto=format&fit=crop",
+      "image": "/uploads/frozen-real.jpg",
       "desc": "Buzla blend edilmiş karpuz; ferahlatıcı bir yaz içeceği.",
       "price": 135
     },
